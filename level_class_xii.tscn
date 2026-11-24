@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://o3q4os4r2ovy"]
+
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="1_hmhim"]
+[ext_resource type="FontFile" uid="uid://bcbl3hwpr6eyo" path="res://assets/poti.ttf" id="2_24rgu"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="3_xl5vy"]
+[ext_resource type="Texture2D" uid="uid://b32otnck8pui2" path="res://assets/apel.png" id="4_c1wpo"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="5_rqew8"]
+
+[sub_resource type="GDScript" id="GDScript_hmhim"]
+script/source = "extends Control
+
+#Go to Home
+func _on_home_pressed() -> void:
+	GlobalSound.play_sfx_menu()
+	get_tree().change_scene_to_file(\"res://main_menu.tscn\")
+
+# Icon Level 1
+func _on_btn_level_1_pressed() -> void:
+	GlobalGame.kelas_terpilih = \"xii\"
+	GlobalGame.level_terpilih = 1
+	GlobalSound.play_sfx_menu()
+	get_tree().change_scene_to_file(\"res://quiz_page.tscn\")
+
+# Background Sound
+func _ready() -> void:
+	GlobalSound.play_bgm(\"res://assets/bgm_menu.mp3\")
+"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f75x3"]
+texture = ExtResource("1_hmhim")
+
+[node name="LevelClassXII" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_hmhim")
+
+[node name="BgLevel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f75x3")
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 629.0
+offset_top = 113.0
+offset_right = 741.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24rgu")
+theme_override_font_sizes/font_size = 100
+text = "Level"
+
+[node name="Home" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 19.0
+offset_right = 667.0
+offset_bottom = 393.0
+scale = Vector2(0.155336, 0.149891)
+texture_normal = ExtResource("3_xl5vy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 320.0
+offset_right = 1957.0
+offset_bottom = 823.0
+scale = Vector2(0.388329, 0.32382)
+theme_override_constants/separation = 50
+
+[node name="BtnLevel1" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_c1wpo")
+
+[node name="Level1" type="Label" parent="HBoxContainer/BtnLevel1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -189.0
+offset_right = 86.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_outline_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("5_rqew8")
+theme_override_font_sizes/font_size = 300
+text = "1"
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="HBoxContainer/BtnLevel1" to="." method="_on_btn_level_1_pressed"]

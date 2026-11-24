@@ -1,0 +1,342 @@
+[gd_scene load_steps=17 format=3 uid="uid://cgh3t3ssevtj2"]
+
+[ext_resource type="Script" uid="uid://bk84u674n4yus" path="res://score_page.gd" id="1_eefd0"]
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="1_kpp2s"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="2_eefd0"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="3_orxdc"]
+[ext_resource type="FontFile" uid="uid://qewxhsus8o0" path="res://assets/Svetze.otf" id="4_edq22"]
+[ext_resource type="Texture2D" uid="uid://p6e8ws371rny" path="res://assets/back.png" id="5_edq22"]
+[ext_resource type="Texture2D" uid="uid://0y67iy8pd0sx" path="res://assets/silang.jpg" id="7_1ofl0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofl0"]
+texture = ExtResource("1_kpp2s")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8i7m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.479183, 0.479183, 0.479183, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0s6jq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mo636"]
+bg_color = Color(1, 0.97416, 0.514231, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdhx0"]
+bg_color = Color(0.976471, 0.756863, 0.847059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hu44t"]
+bg_color = Color(1, 0.988235, 0.713726, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0s6jq"]
+bg_color = Color(1, 1, 1, 0.988235)
+border_width_left = 10
+border_width_top = 30
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.983395, 0.833875, 0.893311, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xn835"]
+bg_color = Color(1, 0.972549, 0.513726, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmukr"]
+bg_color = Color(1, 0.972549, 0.513726, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="ScorePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eefd0")
+
+[node name="BgScore" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ofl0")
+
+[node name="FinalScore" type="Label" parent="."]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 65.0
+offset_right = 903.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 50
+text = "final score "
+
+[node name="Home" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1238.0
+offset_top = 9.0
+offset_right = 1904.0
+offset_bottom = 383.0
+scale = Vector2(0.168354, 0.17193)
+texture_normal = ExtResource("3_orxdc")
+
+[node name="BtnBack" type="TextureButton" parent="."]
+offset_left = 108.0
+offset_top = -9.0
+offset_right = 333.0
+offset_bottom = 216.0
+scale = Vector2(-0.478588, 0.480394)
+texture_normal = ExtResource("5_edq22")
+
+[node name="ScoreBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 170.0
+offset_right = 1036.0
+offset_bottom = 466.0
+scale = Vector2(1.21142, 1.16496)
+theme_override_styles/panel = SubResource("StyleBoxFlat_y8i7m")
+
+[node name="correct" type="Label" parent="ScoreBox"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 148.0
+offset_right = 214.0
+offset_bottom = 183.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_edq22")
+theme_override_font_sizes/font_size = 30
+text = "correct"
+
+[node name="NilaiBenar" type="Label" parent="ScoreBox/correct"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 54.0
+offset_right = 74.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 50
+text = "8"
+
+[node name="Nilai" type="Label" parent="ScoreBox"]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 28.0
+offset_right = 636.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 70
+text = "80/100"
+
+[node name="Wrong" type="Label" parent="ScoreBox"]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 150.0
+offset_right = 501.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_edq22")
+theme_override_font_sizes/font_size = 30
+text = "wrong"
+
+[node name="NilaiSalah" type="Label" parent="ScoreBox/Wrong"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 53.0
+offset_right = 64.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="Questions" type="Label" parent="ScoreBox"]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 148.0
+offset_right = 820.0
+offset_bottom = 183.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_edq22")
+theme_override_font_sizes/font_size = 30
+text = "questions"
+
+[node name="JumlahPertanyaan" type="Label" parent="ScoreBox/Questions"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 53.0
+offset_right = 103.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="BtnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 562.0
+offset_right = 1128.0
+offset_bottom = 639.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_focus_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_pressed_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0s6jq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mo636")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bdhx0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hu44t")
+text = "exit"
+
+[node name="BtnPlayAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 564.0
+offset_right = 572.0
+offset_bottom = 645.0
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_focus_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_pressed_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0s6jq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mo636")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bdhx0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hu44t")
+text = "Play again"
+
+[node name="PopupCustom" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0s6jq")
+
+[node name="text" type="Label" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 337.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_eefd0")
+theme_override_font_sizes/font_size = 15
+text = "Apakah kamu yakin ingin keluar dari Latihan Ini?"
+autowrap_mode = 1
+
+[node name="judul" type="Label" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 98.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Konfirmasi"
+autowrap_mode = 1
+
+[node name="ya" type="Button" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 140.0
+offset_right = 132.0
+offset_bottom = 174.0
+theme_override_colors/font_hover_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_pressed_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_xn835")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xn835")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qmukr")
+text = "Ya"
+
+[node name="Tidak" type="Button" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 141.0
+offset_right = 353.0
+offset_bottom = 175.0
+theme_override_colors/font_hover_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_pressed_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_xn835")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xn835")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qmukr")
+text = "Tidak"
+
+[node name="BtnSilang" type="TextureButton" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 5.0
+offset_right = 856.0
+offset_bottom = 474.0
+scale = Vector2(0.0475395, 0.0439759)
+texture_normal = ExtResource("7_1ofl0")
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="BtnExit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="BtnPlayAgain" to="." method="_on_btn_play_again_pressed"]
+[connection signal="pressed" from="PopupCustom/ya" to="." method="_on_ya_pressed"]
+[connection signal="pressed" from="PopupCustom/Tidak" to="." method="_on_tidak_pressed"]
+[connection signal="pressed" from="PopupCustom/BtnSilang" to="." method="_on_btn_silang_pressed"]

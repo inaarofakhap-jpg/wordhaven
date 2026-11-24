@@ -1,0 +1,178 @@
+[gd_scene load_steps=9 format=3 uid="uid://cowht08vk2qpc"]
+
+[ext_resource type="Script" uid="uid://di4711y7huyku" path="res://menu_selection.gd" id="1_y3qa1"]
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="2_ccxf5"]
+[ext_resource type="FontFile" uid="uid://bcbl3hwpr6eyo" path="res://assets/poti.ttf" id="3_7in5o"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="4_2n65j"]
+[ext_resource type="Texture2D" uid="uid://p6e8ws371rny" path="res://assets/back.png" id="5_ccxf5"]
+[ext_resource type="Texture2D" uid="uid://bx347cts23bay" path="res://assets/camera.png" id="5_miu37"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="6_6tnw0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5r34m"]
+texture = ExtResource("2_ccxf5")
+
+[node name="MenuSelection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3qa1")
+
+[node name="BgClass" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5r34m")
+
+[node name="ChooseMenu" type="Label" parent="."]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 60.0
+offset_right = 792.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_7in5o")
+theme_override_font_sizes/font_size = 100
+text = "choose menu"
+
+[node name="BtnHome" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1234.0
+offset_top = 22.0
+offset_right = 1900.0
+offset_bottom = 396.0
+scale = Vector2(0.168354, 0.17193)
+texture_normal = ExtResource("4_2n65j")
+
+[node name="BtnBack" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = -9.0
+offset_right = 333.0
+offset_bottom = 216.0
+scale = Vector2(-0.478588, 0.480394)
+texture_normal = ExtResource("5_ccxf5")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 212.0
+offset_right = 1425.0
+offset_bottom = 813.0
+scale = Vector2(0.794563, 0.744578)
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 35
+columns = 3
+
+[node name="LS" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconLS" type="TextureButton" parent="GridContainer/LS"]
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="textLs" type="Label" parent="GridContainer/LS"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Latihan Soal"
+
+[node name="UO" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconUO" type="TextureButton" parent="GridContainer/UO"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="TextUO" type="Label" parent="GridContainer/UO"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Ulangan Online"
+
+[node name="GM" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconGM" type="TextureButton" parent="GridContainer/GM"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="TextGM" type="Label" parent="GridContainer/GM"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Game mini"
+
+[node name="TI" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconTI" type="TextureButton" parent="GridContainer/TI"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="TextTI" type="Label" parent="GridContainer/TI"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Test IQ"
+
+[node name="BB" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconBB" type="TextureButton" parent="GridContainer/BB"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="TextBB" type="Label" parent="GridContainer/BB"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Buku BST"
+
+[node name="L" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="IconL" type="TextureButton" parent="GridContainer/L"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+texture_normal = ExtResource("5_miu37")
+
+[node name="TextL" type="Label" parent="GridContainer/L"]
+modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("6_6tnw0")
+theme_override_font_sizes/font_size = 25
+text = "Lainnya"
+
+[connection signal="pressed" from="BtnHome" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="GridContainer/LS/IconLS" to="." method="_on_icon_ls_pressed"]

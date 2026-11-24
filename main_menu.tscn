@@ -1,0 +1,289 @@
+[gd_scene load_steps=16 format=3 uid="uid://cxv1kccx73xcs"]
+
+[ext_resource type="Texture2D" uid="uid://dqbt3wi4oqs0" path="res://assets/mainmenu.png" id="1_glbon"]
+[ext_resource type="Script" uid="uid://bij87e8cba8eb" path="res://main_menu.gd" id="1_nlkkf"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="2_nlkkf"]
+[ext_resource type="FontFile" uid="uid://bcbl3hwpr6eyo" path="res://assets/poti.ttf" id="3_qe12f"]
+[ext_resource type="FontFile" uid="uid://qewxhsus8o0" path="res://assets/Svetze.otf" id="4_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://0y67iy8pd0sx" path="res://assets/silang.jpg" id="6_nlkkf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
+texture = ExtResource("1_glbon")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qe12f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(1, 0.97416, 0.514231, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.976471, 0.756863, 0.847059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(1, 0.988235, 0.713726, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.203922)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.42)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k4wn"]
+bg_color = Color(1, 0.988235, 0.713726, 1)
+border_width_top = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+bg_color = Color(1, 1, 1, 0.988235)
+border_width_left = 10
+border_width_top = 30
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.983395, 0.833875, 0.893311, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5v2v"]
+bg_color = Color(1, 0.972549, 0.513726, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(1, 0.972549, 0.513726, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlkkf")
+
+[node name="BgMain" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = -3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7vrkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 416.0
+offset_right = 488.0
+offset_bottom = 637.0
+theme_override_constants/separation = 12
+
+[node name="BtnStart" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_focus_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_pressed_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Start"
+
+[node name="BtnProfile" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_focus_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_pressed_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Profile"
+
+[node name="BtnExit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_focus_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_pressed_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_constants/outline_size = 5
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nlkkf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "exit"
+
+[node name="Word" type="Label" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 83.0
+offset_right = 337.0
+offset_bottom = 263.0
+scale = Vector2(1.14077, 1.15128)
+theme_override_colors/font_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_qe12f")
+theme_override_font_sizes/font_size = 180
+text = "Word"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Haven" type="Label" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 238.0
+offset_right = 460.0
+offset_bottom = 314.0
+scale = Vector2(1.13946, 1.3316)
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_font_sizes/font_size = 55
+text = "Haven"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextLatihanSoaL" type="Label" parent="."]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 327.0
+offset_right = 475.0
+offset_bottom = 366.0
+scale = Vector2(1.04932, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_8qtwp")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_0k4wn")
+text = "Latihan Soal Bahasa Inggris"
+
+[node name="PopupCustom" type="Panel" parent="."]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qe12f")
+
+[node name="text" type="Label" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 337.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("2_nlkkf")
+theme_override_font_sizes/font_size = 15
+text = "Apakah kamu yakin ingin keluar dari Latihan Ini?"
+autowrap_mode = 1
+
+[node name="judul" type="Label" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 98.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Konfirmasi"
+autowrap_mode = 1
+
+[node name="ya" type="Button" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 140.0
+offset_right = 132.0
+offset_bottom = 174.0
+theme_override_colors/font_hover_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_pressed_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qtwp")
+text = "Ya"
+
+[node name="Tidak" type="Button" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 141.0
+offset_right = 353.0
+offset_bottom = 175.0
+theme_override_colors/font_hover_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_focus_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_pressed_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8qtwp")
+text = "Tidak"
+
+[node name="BtnSilang" type="TextureButton" parent="PopupCustom"]
+layout_mode = 0
+offset_left = 364.0
+offset_top = 5.0
+offset_right = 856.0
+offset_bottom = 474.0
+scale = Vector2(0.0475395, 0.0439759)
+texture_normal = ExtResource("6_nlkkf")
+
+[connection signal="pressed" from="VBoxContainer/BtnStart" to="." method="_on_btn_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnProfile" to="." method="_on_btn_profile_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnExit" to="." method="_on_btn_exit_pressed"]
+[connection signal="pressed" from="PopupCustom/ya" to="." method="_on_ya_pressed"]
+[connection signal="pressed" from="PopupCustom/Tidak" to="." method="_on_tidak_pressed"]
+[connection signal="pressed" from="PopupCustom/BtnSilang" to="." method="_on_btn_silang_pressed"]

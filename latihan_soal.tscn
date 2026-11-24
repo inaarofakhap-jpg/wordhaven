@@ -1,0 +1,232 @@
+[gd_scene load_steps=10 format=3 uid="uid://xa3eep51h48d"]
+
+[ext_resource type="Script" uid="uid://dli6hc081pisu" path="res://latihan_soal.gd" id="1_cj7i7"]
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="2_w51ts"]
+[ext_resource type="FontFile" uid="uid://bcbl3hwpr6eyo" path="res://assets/poti.ttf" id="3_pu7gd"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="4_65fdp"]
+[ext_resource type="Texture2D" uid="uid://p6e8ws371rny" path="res://assets/back.png" id="5_pu7gd"]
+[ext_resource type="Texture2D" uid="uid://b32otnck8pui2" path="res://assets/apel.png" id="5_uibum"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="6_ybd71"]
+[ext_resource type="Texture2D" uid="uid://3tuuub73k6u5" path="res://assets/gembok.png" id="8_65fdp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f75x3"]
+texture = ExtResource("2_w51ts")
+
+[node name="LatihanSoal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cj7i7")
+
+[node name="BgLevel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f75x3")
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 628.0
+offset_top = 55.0
+offset_right = 740.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.976471, 0.756863, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_pu7gd")
+theme_override_font_sizes/font_size = 100
+text = "Level"
+
+[node name="BtnHome" type="TextureButton" parent="."]
+offset_left = 1234.0
+offset_top = 20.0
+offset_right = 1900.0
+offset_bottom = 394.0
+scale = Vector2(0.168354, 0.17193)
+texture_normal = ExtResource("4_65fdp")
+
+[node name="BtnBack" type="TextureButton" parent="."]
+offset_left = 108.0
+offset_top = -9.0
+offset_right = 333.0
+offset_bottom = 216.0
+scale = Vector2(-0.478588, 0.480394)
+texture_normal = ExtResource("5_pu7gd")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 217.0
+offset_right = 2244.0
+offset_bottom = 1253.0
+scale = Vector2(0.479058, 0.404781)
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 30
+columns = 4
+
+[node name="BtnLevel1" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="Level1" type="Label" parent="GridContainer/BtnLevel1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = -189.0
+offset_right = 86.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_colors/font_outline_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("6_ybd71")
+theme_override_font_sizes/font_size = 300
+text = "1"
+
+[node name="BtnLevel2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel3" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel4" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel5" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel6" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel7" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[node name="BtnLevel8" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_uibum")
+
+[node name="TextureButton" type="TextureButton" parent="GridContainer/BtnLevel8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.762
+offset_top = -225.382
+offset_right = 183.238
+offset_bottom = 205.618
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_65fdp")
+
+[connection signal="pressed" from="BtnHome" to="." method="_on_btn_home_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="GridContainer/BtnLevel1" to="." method="_on_btn_level_1_pressed"]

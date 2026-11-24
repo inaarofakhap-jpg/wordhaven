@@ -1,0 +1,258 @@
+[gd_scene load_steps=14 format=3 uid="uid://ce52qt2nk0ew0"]
+
+[ext_resource type="Script" uid="uid://bic78cwa7ro1o" path="res://quiz_page.gd" id="1_7g4rg"]
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="1_71grs"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="2_gjhib"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="3_c4api"]
+[ext_resource type="Texture2D" uid="uid://bo3r5j7t2y3eo" path="res://assets/garis.png" id="4_7g4rg"]
+[ext_resource type="Texture2D" uid="uid://p6e8ws371rny" path="res://assets/back.png" id="4_uap8h"]
+[ext_resource type="Texture2D" uid="uid://bmj0r7rej8rlk" path="res://assets/ainacute.png" id="6_innqh"]
+[ext_resource type="Texture2D" uid="uid://cfpj2y4ejam6q" path="res://assets/moka.png" id="7_7g4rg"]
+[ext_resource type="FontFile" uid="uid://qewxhsus8o0" path="res://assets/Svetze.otf" id="8_c4api"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7qau"]
+texture = ExtResource("1_71grs")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7g4rg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.351563, 0.351563, 0.351563, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wqv8"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.672064, 0.672064, 0.672064, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.794828, 0.794828, 0.794828, 1)
+shadow_size = 5
+anti_aliasing = false
+anti_aliasing_size = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4api"]
+bg_color = Color(0.897813, 0.897813, 0.897813, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.794828, 0.794828, 0.794828, 1)
+shadow_size = 5
+
+[node name="QuizPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7g4rg")
+
+[node name="BgQuest" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_l7qau")
+
+[node name="BtnHome" type="TextureButton" parent="."]
+offset_left = 1234.0
+offset_top = 20.0
+offset_right = 1900.0
+offset_bottom = 394.0
+scale = Vector2(0.168354, 0.17193)
+texture_normal = ExtResource("2_gjhib")
+
+[node name="BtnBack" type="TextureButton" parent="."]
+offset_left = 108.0
+offset_top = -9.0
+offset_right = 333.0
+offset_bottom = 216.0
+scale = Vector2(-0.478588, 0.480394)
+texture_normal = ExtResource("4_uap8h")
+
+[node name="QuestionBar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 532.0
+offset_top = 18.0
+offset_right = 810.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_c4api")
+theme_override_font_sizes/font_size = 37
+text = "question 1"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 68.0
+offset_right = 732.0
+offset_bottom = 158.0
+scale = Vector2(1.83306, 0.912812)
+max_value = 10.0
+texture_under = ExtResource("4_7g4rg")
+texture_progress = ExtResource("4_7g4rg")
+
+[node name="karakterillit" type="TextureRect" parent="TextureProgressBar"]
+layout_mode = 0
+offset_left = 45.825
+offset_top = -7.66861
+offset_right = 478.825
+offset_bottom = 569.331
+scale = Vector2(0.0601394, 0.105784)
+texture = ExtResource("7_7g4rg")
+
+[node name="MainCaracter" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 150.0
+offset_right = 357.0
+offset_bottom = 524.0
+scale = Vector2(0.610178, 0.628098)
+texture = ExtResource("6_innqh")
+
+[node name="BoxQuestion" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 156.0
+offset_right = 1281.0
+offset_bottom = 363.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7g4rg")
+
+[node name="Question" type="Label" parent="BoxQuestion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -437.5
+offset_top = -13.0
+offset_right = 437.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_c4api")
+theme_override_font_sizes/font_size = 20
+text = "what is the correct grammer fot..."
+autowrap_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 405.0
+offset_right = 1292.0
+offset_bottom = 773.0
+theme_override_constants/separation = 10
+
+[node name="Baris1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnOpsiA" type="Button" parent="VBoxContainer/Baris1"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("8_c4api")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4api")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wqv8")
+text = "What is the correct grammar for....a"
+
+[node name="BtnOpsiB" type="Button" parent="VBoxContainer/Baris1"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("8_c4api")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4api")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wqv8")
+text = "What is the correct grammar for....b"
+
+[node name="Baris2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnOpsiC" type="Button" parent="VBoxContainer/Baris2"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("8_c4api")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4api")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wqv8")
+text = "What is the correct grammar for....c"
+
+[node name="BtnOpsiD" type="Button" parent="VBoxContainer/Baris2"]
+custom_minimum_size = Vector2(600, 100)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_c4api")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4api")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wqv8")
+text = "What is the correct grammar for....d"
+
+[node name="BtnOpsiE" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(600, 80)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 8
+theme_override_fonts/font = ExtResource("8_c4api")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wqv8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4api")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3wqv8")
+text = "What is the correct grammar for...."
+
+[connection signal="pressed" from="BtnHome" to="." method="_on_btn_home_pressed"]
+[connection signal="pressed" from="BtnBack" to="." method="_on_btn_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/Baris1/BtnOpsiA" to="." method="_on_btn_opsi_a_pressed"]
+[connection signal="pressed" from="VBoxContainer/Baris1/BtnOpsiB" to="." method="_on_btn_opsi_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/Baris2/BtnOpsiC" to="." method="_on_btn_opsi_c_pressed"]
+[connection signal="pressed" from="VBoxContainer/Baris2/BtnOpsiD" to="." method="_on_btn_opsi_d_pressed"]
+[connection signal="pressed" from="VBoxContainer/BtnOpsiE" to="." method="_on_btn_opsi_e_pressed"]

@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://c1x5v2bxxrw31"]
+
+[ext_resource type="Texture2D" uid="uid://bfwvqdca4vea4" path="res://assets/bg.png" id="1_blfko"]
+[ext_resource type="Script" uid="uid://cdyhdmompr50m" path="res://profile_page.gd" id="1_p7nr1"]
+[ext_resource type="Texture2D" uid="uid://d1jn1jw0onynv" path="res://assets/home.png" id="2_p7nr1"]
+[ext_resource type="FontFile" uid="uid://bgvrdvhtsr451" path="res://assets/Eight-Bit Exposition.otf" id="3_eefhy"]
+[ext_resource type="Texture2D" uid="uid://bmj0r7rej8rlk" path="res://assets/ainacute.png" id="4_h1io4"]
+[ext_resource type="FontFile" uid="uid://bcbl3hwpr6eyo" path="res://assets/poti.ttf" id="5_6ob2x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgbxw"]
+texture = ExtResource("1_blfko")
+
+[node name="ProfilePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7nr1")
+
+[node name="BgAbout" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dgbxw")
+
+[node name="Home" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 23.0
+offset_right = 670.0
+offset_bottom = 397.0
+scale = Vector2(0.168354, 0.17193)
+texture_normal = ExtResource("2_p7nr1")
+
+[node name="AboutCreator" type="Label" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 64.0
+offset_right = 966.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(1, 0.988235, 0.713726, 1)
+theme_override_colors/font_outline_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_eefhy")
+theme_override_font_sizes/font_size = 50
+text = "About creator"
+
+[node name="MainCaracter" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 219.0
+offset_right = 836.0
+offset_bottom = 1044.0
+scale = Vector2(0.457686, 0.450769)
+texture = ExtResource("4_h1io4")
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 219.0
+offset_right = 1195.0
+offset_bottom = 616.0
+theme_override_colors/font_color = Color(0.384314, 0.247059, 0.215686, 1)
+theme_override_fonts/font = ExtResource("5_6ob2x")
+theme_override_font_sizes/font_size = 50
+text = "Name : Ina Siti Arofah 
+Role : student and game creator
+About : I'm a student who loves learning, 
+creativity, and cute digital designs.
+ I created Wordhaven to make learning 
+english more fun and interactivet
+My project : Wordhaven _ an english grammar quiz game"
+
+[connection signal="pressed" from="Home" to="." method="_on_home_pressed"]
